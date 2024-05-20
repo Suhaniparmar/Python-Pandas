@@ -1,17 +1,18 @@
 import pandas as pd
 
-file2 = pd.read_excel("dashboard.xlsx")
+file3 = pd.read_csv("C:\\Users\\Suhani\\Desktop\\git\\Python-Pandas\\Pandas\\file2.csv")
+print(file3)
 
-print(file2)
 
-f2 = file2[["Reach","Posts"]]
-print(type(f2))
-print(f2.shape)   # shape & dtype are attribute ( no need to brackate)
 
-high_reach = file2[file2["Reach"]>5000]
+f3 = file3[["Reach","Posts"]]
+print(type(f3))
+print(f3.shape)   # shape & dtype are attribute ( no need to brackate)
+
+high_reach = file3[file3["Reach"]>5000]
 print(high_reach)
 
-follower = file2[file2["Followers"].isin([20,21,22])]
+follower = file3[file3["Interaction"].isin([6,9])]
 # or
-#follower =  file2[(file2["Followers"]==20) | (file2["Followers"]==21) | (file2["Followers"]==22)]
+#follower =  file3[(file3["Followers"]==20) | (file3["Followers"]==21) | (file3["Followers"]==22)]
 print(follower)
